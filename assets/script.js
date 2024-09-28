@@ -18,6 +18,7 @@ const slides = [
 ];
 
 //variables//
+
 const dots = document.querySelector(".dots");
 const arrowLeft = document.querySelector(".arrow_left")
 const arrowRight = document.querySelector(".arrow_right")
@@ -26,7 +27,7 @@ const bannerText = document.querySelector("#banner p")
 
 let index = 0
 
-//fonctions//
+//functions//
 
 function main() {
 	dot()
