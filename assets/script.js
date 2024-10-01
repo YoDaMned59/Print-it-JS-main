@@ -53,10 +53,9 @@ function clickLeft() {
 	arrowLeft.addEventListener("click", () => {
 		const slideDots = document.querySelectorAll(".dots .dot")
 		slideDots[index].classList.remove("dot_selected")
-		index--
-		if(index < 0) {
+		if(index === 0) {
 			index = slides.length -1
-		}
+		} else{index--}
 		slideDots[index].classList.add("dot_selected")
 		img.src = "./assets/images/slideshow/" + slides[index].image;
 		bannerText.innerHTML = slides[index].tagLine
@@ -69,10 +68,9 @@ function clickRight() {
 	arrowRight.addEventListener("click", () => {
 		const slideDots = document.querySelectorAll(".dots .dot")
 		slideDots[index].classList.remove("dot_selected")
-		index++
-		if(index > slides.length -1) {
+		if(index === slides.length -1) {
 			index = 0
-		}
+		} else{index++}
 		slideDots[index].classList.add("dot_selected")
 		img.src = "./assets/images/slideshow/" + slides[index].image;
 		bannerText.innerHTML = slides[index].tagLine
